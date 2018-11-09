@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <SiteTitle msg="17Novembre.info"/>
+    <SiteTitle msg="17novembre.info"/>
   </div>
 </template>
 

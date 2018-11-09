@@ -9,6 +9,12 @@
 </template>
 
 <style lang="scss">
+body, html{
+  font-size: 100%;
+  h1{
+    font-size: 1.5em;
+  }
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
