@@ -4,7 +4,7 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -21,5 +21,21 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     }
-  ]
+  ],
+  // scroll to top @{doc} /> https://router.vuejs.org/guide/advanced/scroll-behavior.html
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })
+
+/* PageNotFound redirection */
+
+router.beforeEach((to, from, next) => {
+  if (!to.matched.length) {
+    next('/')
+  } else {
+    next()
+  }
+})
+
+export default router
