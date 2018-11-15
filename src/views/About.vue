@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Une nouvelle aire pour la France</h1>
+    <h1>Un grand changement pour la France</h1>
   </div>
 </template>
 
